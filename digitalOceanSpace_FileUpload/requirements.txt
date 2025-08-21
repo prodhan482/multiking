@@ -1,0 +1,5 @@
+# Following will be installed.
+
+boto3
+pymysql
+python-dotenv

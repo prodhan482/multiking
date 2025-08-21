@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:padding="20dp"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/t1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/TheCloseButton"
+                android:fontFamily="@font/roboto_medium"
+                app:fontFamily="@font/roboto_medium"
+                android:textColor="@color/black_1"
+                android:text="Send Money"
+                android:layout_width="0dp"
+                android:textSize="20dp"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/TheCloseButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_gray_close_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/theList1"
+                android:layout_width="0dp"
+                tools:itemCount="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/t1"
+                tools:listitem="@layout/rv_recharge_screen_mfs_box_t2" />
+
+            <TextView
+                android:id="@+id/t2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/theList1"
+                app:layout_constraintEnd_toStartOf="@id/TheCloseButton"
+                android:fontFamily="@font/roboto_medium"
+                app:fontFamily="@font/roboto_medium"
+                android:textColor="@color/black_1"
+                android:layout_marginTop="30dp"
+                android:text="Mobile Recharge"
+                android:layout_width="0dp"
+                android:textSize="20dp"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/theList2"
+                android:layout_width="0dp"
+                tools:itemCount="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/t2"
+                tools:listitem="@layout/rv_recharge_screen_mfs_box_t2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

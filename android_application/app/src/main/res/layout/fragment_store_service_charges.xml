@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:padding="15dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/t1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/TheCloseButton"
+            android:fontFamily="@font/roboto_medium"
+            app:fontFamily="@font/roboto_medium"
+            android:textColor="#191919"
+            android:text="Update Service Charges"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/TheCloseButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_gray_close_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/header"
+            android:layout_marginTop="20dp"
+            layout="@layout/rv_service_charges"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/t1"
+            android:layout_height="wrap_content" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/theList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            tools:listitem="@layout/rv_service_charges"
+            app:layout_constraintBottom_toTopOf="@id/doUpdateRequest"
+            app:layout_constraintTop_toBottomOf="@id/header" />
+
+        <TextView
+            android:id="@+id/doAddNewRow"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/corner_bg_11"
+            android:clickable="false"
+            android:focusable="false"
+            android:fontFamily="@font/roboto_bold"
+            app:fontFamily="@font/roboto_bold"
+            android:letterSpacing="0.07"
+            android:lineSpacingExtra="3sp"
+            android:gravity="center"
+            android:text="ADD"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/doUpdateRequest"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/doUpdateRequest"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/corner_bg_10"
+            android:clickable="false"
+            android:focusable="false"
+            android:fontFamily="@font/roboto_bold"
+            app:fontFamily="@font/roboto_bold"
+            android:letterSpacing="0.07"
+            android:lineSpacingExtra="3sp"
+            android:gravity="center"
+            android:text="UPDATE"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/doAddNewRow" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

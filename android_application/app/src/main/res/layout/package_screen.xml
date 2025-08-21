@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="#ecf0f4"
+        android:padding="20dp"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:padding="10dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/t1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/TheCloseButton"
+                android:fontFamily="@font/roboto_medium"
+                app:fontFamily="@font/roboto_medium"
+                android:textColor="@color/black_1"
+                android:text="Today's Package Offers"
+                android:layout_width="0dp"
+                android:textSize="20dp"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/TheCloseButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_gray_close_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/theList"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                tools:listitem="@layout/package_screen_rv"
+                app:layout_constraintBottom_toTopOf="@id/skipWindow"
+                app:layout_constraintTop_toBottomOf="@id/TheCloseButton" />
+
+
+            <View
+                android:id="@+id/skipWindow"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/corner_bg_10"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/view9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:fontFamily="@font/roboto_bold"
+                app:fontFamily="@font/roboto_bold"
+                android:letterSpacing="0.07"
+                android:lineSpacingExtra="3sp"
+                android:text="SKIP"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/skipWindow"
+                app:layout_constraintEnd_toEndOf="@+id/skipWindow"
+                app:layout_constraintStart_toStartOf="@+id/skipWindow"
+                app:layout_constraintTop_toTopOf="@+id/skipWindow" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

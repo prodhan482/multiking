@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/topBackground"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#f8f8f8"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="26dp"
+            android:src="@drawable/profile_placeholder"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="1dp"
+            app:layout_constraintStart_toStartOf="@+id/topBackground"
+            app:layout_constraintTop_toTopOf="@+id/topBackground" />
+
+        <TextView
+            android:id="@+id/UserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Hello, Rafsan Majid!"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:fontFamily="@font/roboto_medium"
+            app:layout_constraintStart_toEndOf="@+id/profile_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/profile_image" />
+
+        <TextView
+            android:id="@+id/UserEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="rafsan.majid@gmail.com"
+            android:textColor="#888d91"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/UserName"
+            app:layout_constraintTop_toBottomOf="@+id/UserName" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="30dp"
+            android:fillViewport="true"
+            android:focusableInTouchMode="true"
+            app:layout_constraintBottom_toTopOf="@+id/logoutButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topBackground"
+            app:layout_constraintVertical_weight="1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/MfsSummeryIcon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/outline_menu_24"
+                    android:tint="#16c3c1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/MfsSummeryIconText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="25dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:letterSpacing="0.08"
+                    android:text="Daily Summery"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/roboto_medium"
+                    app:layout_constraintBottom_toBottomOf="@+id/MfsSummeryIcon"
+                    app:layout_constraintStart_toEndOf="@+id/MfsSummeryIcon"
+                    app:layout_constraintTop_toTopOf="@+id/MfsSummeryIcon" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/mfsSummeryGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="MfsSummeryIcon,MfsSummeryIconText" />
+
+                <View
+                    android:id="@+id/mfsSummeryBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:layout_constraintTop_toTopOf="@+id/MfsSummeryIcon" />
+
+                <ImageView
+                    android:id="@+id/RechargeIcon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/outline_menu_24"
+                    android:tint="#16c3c1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/MfsSummeryIcon" />
+
+                <TextView
+                    android:id="@+id/RechargeIconText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="25dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:letterSpacing="0.08"
+                    android:text="View All Recharges"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/roboto_medium"
+                    app:layout_constraintBottom_toBottomOf="@+id/RechargeIcon"
+                    app:layout_constraintStart_toEndOf="@+id/RechargeIcon"
+                    app:layout_constraintTop_toTopOf="@+id/RechargeIcon" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/rechargeGroup"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="RechargeIcon,RechargeIconText, rechargeGroupBtn" />
+
+                <View
+                    android:id="@+id/rechargeGroupBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:layout_constraintTop_toTopOf="@+id/RechargeIcon" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <ImageView
+            android:id="@+id/ChangePasswordIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="20dp"
+            android:tint="@color/colorPrimary"
+            android:src="@drawable/outline_lock_black_24"
+            app:layout_constraintBottom_toTopOf="@id/LogOutIcon"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/ChangePasswordText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="25dp"
+            android:fontFamily="@font/roboto_medium"
+            android:letterSpacing="0.08"
+            android:text="Change Password"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:fontFamily="@font/roboto_medium"
+            app:layout_constraintBottom_toBottomOf="@+id/ChangePasswordIcon"
+            app:layout_constraintStart_toEndOf="@+id/ChangePasswordIcon"
+            app:layout_constraintTop_toTopOf="@+id/ChangePasswordIcon" />
+
+        <View
+            android:id="@+id/ChangePasswordButton"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toTopOf="@+id/ChangePasswordIcon" />
+
+        <ImageView
+            android:id="@+id/LogOutIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="38dp"
+            android:src="@drawable/outline_logout_black_18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/LogOutText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="25dp"
+            android:fontFamily="@font/roboto_medium"
+            android:letterSpacing="0.08"
+            android:text="Log Out"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:fontFamily="@font/roboto_medium"
+            app:layout_constraintBottom_toBottomOf="@+id/LogOutIcon"
+            app:layout_constraintStart_toEndOf="@+id/LogOutIcon"
+            app:layout_constraintTop_toTopOf="@+id/LogOutIcon" />
+
+        <View
+            android:id="@+id/logoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toTopOf="@+id/LogOutIcon" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/corner_bg_with_stroke_1"
+    android:layout_width="wrap_content"
+    android:minWidth="100dp"
+    android:layout_height="30dp"
+    app:layout_constrainedHeight="true">
+
+    <TextView
+        android:id="@+id/theLabel"
+        android:layout_width="0dp"
+        android:layout_marginLeft="9dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="wrap_content"
+        android:duplicateParentState="true"
+        android:fontFamily="@font/roboto_light"
+        android:lineSpacingExtra="2sp"
+        android:text="Label"
+        android:maxLines="1"
+        android:textColor="#5d636d"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/roboto_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/TheCloseButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/TheCloseButton"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginRight="7dp"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_gray_close_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

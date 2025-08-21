@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        app:cardBackgroundColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/g1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".70" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/g2"
+                app:layout_constraintGuide_begin="110dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/balance"
+                android:fontFamily="@font/roboto_medium"
+                app:fontFamily="@font/roboto_medium"
+                android:textSize="15dp"
+                android:textColor="@color/black_1"
+                android:layout_width="0dp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="textEnd"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/status"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/g1"
+                android:text="BDT 10,00,000"
+                />
+
+            <TextView
+                android:id="@+id/euroBalance"
+                android:fontFamily="@font/roboto_medium"
+                app:fontFamily="@font/roboto_medium"
+                android:textSize="15dp"
+                android:textColor="@color/black_1"
+                android:layout_width="0dp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="textEnd"
+                android:layout_marginEnd="10dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/balance"
+                app:layout_constraintBottom_toTopOf="@id/g2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/g1"
+                android:text="BDT 10,00,000"
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/resellerLogo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/profile_placeholder"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/status"
+                android:textAppearance="@style/ChipStyle"
+                app:chipBackgroundColor="@color/black"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Approved"/>
+
+            <LinearLayout
+                android:id="@+id/infoHub"
+                app:layout_constraintEnd_toStartOf="@id/g1"
+                app:layout_constraintStart_toEndOf="@id/resellerLogo"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/title"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/roboto_medium"
+                    app:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/black_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    />
+                <TextView
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/details"
+                    android:textColor="@color/black_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LineBreak Info"
+                    />
+                <TextView
+                    android:id="@+id/created_at"
+                    android:fontFamily="@font/roboto_light"
+                    app:fontFamily="@font/roboto_light"
+                    android:textStyle="bold"
+                    android:textColor="@color/black_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15dp"
+                    android:text="Created: sdfsdf"/>
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/updated_at"
+                    android:fontFamily="@font/roboto_light"
+                    app:fontFamily="@font/roboto_light"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:textColor="@color/black_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Updated: 5466"/>
+            </LinearLayout>
+
+            <!-- Buttons -->
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/g2"
+                android:layout_height="0dp"
+                app:flow_horizontalGap="5dp"
+                android:layout_margin="10dp"
+                app:justifyContent="space_between"
+                app:showDividerHorizontal="middle"
+                app:flexWrap="wrap">
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/addBalanceBtt"
+                    android:textColor="@color/md_blue_600"
+                    android:text="Add Balance"
+                    style="?attr/buttonBarButtonStyle"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_blue_600"
+                    android:text="Change Status"
+                    android:id="@+id/ChangeStatusBtt"
+                    style="?attr/buttonBarButtonStyle"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_blue_600"
+                    android:text="Add Return"
+                    android:id="@+id/AddReturnBtt"
+                    style="?attr/buttonBarButtonStyle"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_blue_600"
+                    android:text="Add Payment Received"
+                    android:id="@+id/AddPaymentReceiveBtt"
+                    style="?attr/buttonBarButtonStyle"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/md_blue_600"
+                    android:text="Change Password"
+                    android:id="@+id/ChangePasswordButton"
+                    style="?attr/buttonBarButtonStyle"
+                    />
+            </com.google.android.flexbox.FlexboxLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

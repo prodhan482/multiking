@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ng_add_reseller"
+    app:startDestination="@id/AddNewReseller_S1Fragment">
+
+    <fragment
+        android:id="@+id/AddNewReseller_S1Fragment"
+        android:name="com.hbworks.eu.bkashbd.view.activity.reports.fragments.AddNewReseller_S1"
+        android:label="AddNewReseller_S1"
+        tools:layout="@layout/fragment_add_new_reseller__s1" >
+        <action
+            android:id="@+id/move_AddNewReseller_S2"
+            app:destination="@id/AddNewReseller_S2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/AddNewReseller_S2Fragment"
+        android:name="com.hbworks.eu.bkashbd.view.activity.reports.fragments.AddNewReseller_S2"
+        android:label="AddNewReseller_S2"
+        tools:layout="@layout/fragment_add_new_reseller__s2">
+        <action
+            android:id="@+id/move_AddNewReseller_S1"
+            app:destination="@id/AddNewReseller_S1Fragment"
+            app:popUpTo="@id/AddNewReseller_S2Fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
