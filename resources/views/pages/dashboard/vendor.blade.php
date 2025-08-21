@@ -244,9 +244,9 @@
                                         return '<div class="btn-group-sm">'+
                                             ((info.split('|')[1] === "pending" || info.split('|')[1] === "requested")?'<button type="button" class="btn btn-warning lockRechargeBtt" data-id="'+info.split('|')[0]+'">Lock</button>':'')+
                                             (info.split('|')[1] === "progressing"?'<button type="button" class="btn btn-success approveBtt" data-id="'+info.split('|')[0]+'">Approve</button>':'')+
-                                            ((info.split('|')[1] === "progressing" && !theInstance.isMobile())?'<a class="btn btn-primary shareBtt" href="https://api.whatsapp.com/send?text=HelloDuniya22.com%0aNumber '+row[2]+'%0aAmount '+row[3]+'%0aType '+row[1]+'%0aRefer ID '+row[0]+'%0aReseller: '+row[8]+'%0aParent: '+row[9]+'" target="_blank" data-id="'+info.split('|')[0]+'">Share</a>':'')+
+                                            ((info.split('|')[1] === "progressing" && !theInstance.isMobile())?'<a class="btn btn-primary shareBtt" href="https://api.whatsapp.com/send?text=kingmulti.net%0aNumber '+row[2]+'%0aAmount '+row[3]+'%0aType '+row[1]+'%0aRefer ID '+row[0]+'%0aReseller: '+row[8]+'%0aParent: '+row[9]+'" target="_blank" data-id="'+info.split('|')[0]+'">Share</a>':'')+
 
-                                            ((info.split('|')[1] === "progressing" && theInstance.isMobile())?'<button class="btn btn-primary shareBtt" data-title="HelloDuniya22.com" data-text="HelloDuniya22.com\nNumber '+row[2]+'\nAmount '+row[3]+'\nType '+row[1]+'\nRefer ID '+row[0]+'\nReseller: '+row[8]+'\nParent: '+row[9]+'">Share</button>':'')+
+                                            ((info.split('|')[1] === "progressing" && theInstance.isMobile())?'<button class="btn btn-primary shareBtt" data-title="kingmulti.net" data-text="kingmulti.net\nNumber '+row[2]+'\nAmount '+row[3]+'\nType '+row[1]+'\nRefer ID '+row[0]+'\nReseller: '+row[8]+'\nParent: '+row[9]+'">Share</button>':'')+
 
                                             (info.split('|')[1] === "progressing"?'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-danger rejectBtt" data-id="'+info.split('|')[0]+'">Cancel</button>':'')+
 

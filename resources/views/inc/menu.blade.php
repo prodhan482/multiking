@@ -184,7 +184,7 @@ if($userInfo->user_type == "store"|| $userInfo->user_type == "Reseller"){
                 <li class="nav-item mr-auto">
                     <a class="navbar-brand" href="/manage">
                         <img width="50" src="/assets/images/Logo2.png"/>
-                        <h2 class="brand-text mb-0" style="color: #E3266E">HelloDuniya22.com</h2>
+                        <h2 class="brand-text mb-0" style="color: #E3266E">King Multi Service</h2>
                     </a></li>
                 <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="d-block d-xl-none text-primary toggle-icon font-medium-4" data-feather="x"></i></a></li>
             </ul>

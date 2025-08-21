@@ -3,7 +3,7 @@
 $commands = array(
     "export COMPOSER_ALLOW_SUPERUSER=1",
     "export COMPOSER_HOME=/root",
-    "cd /home/admin/web/helloduniya22.com/public_html",
+    "cd /home/admin/web/kingmulti.net/public_html",
     "/bin/git status",
     "/bin/git pull --no-edit origin master",
     "/usr/local/bin/composer update",

@@ -71,15 +71,15 @@ services:
     build:
       context: .
       dockerfile: .docker/Dockerfile
-    image: multiking.net
-    container_name: multiking_app
+    image: bkashbd.eu
+    container_name: bkash_app
     ports:
       - "8052:8052"
     volumes:
       - .:/var/www
     environment:
       DB_HOST: mysql
-      DB_DATABASE: multikingdb
+      DB_DATABASE: bkashdb
       DB_USERNAME: root
       DB_PASSWORD: rootpassword
     depends_on:
@@ -88,21 +88,21 @@ services:
 
   mysql:
     image: mysql:8.0
-    container_name: mysql_multiking
+    container_name: mysql_bkash
     command: --default-authentication-plugin=mysql_native_password
     ports:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: multikingdb
-      MYSQL_USER: multikinguser
+      MYSQL_DATABASE: bkashdb
+      MYSQL_USER: bkashuser
       MYSQL_PASSWORD: secret
     volumes:
       - mysql_data:/var/lib/mysql
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
-    container_name: phpmyadmin_multiking
+    container_name: phpmyadmin_bkash
     restart: always
     ports:
       - "8080:80"
@@ -116,7 +116,7 @@ services:
 
   redis:
     image: redis:3.2-alpine
-    container_name: redis_multiking
+    container_name: redis_bkash
     restart: always
 
 volumes:

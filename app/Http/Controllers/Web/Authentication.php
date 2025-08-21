@@ -34,7 +34,7 @@ class Authentication extends Controller
             }
 
             /*$recaptcha = new \ReCaptcha\ReCaptcha("6Lcef_EeAAAAAJwGIJfoKHp0jU6LouRFB0g7UcEw");
-            $resp = $recaptcha->setExpectedHostname('helloduniya22.com')
+            $resp = $recaptcha->setExpectedHostname('kingmulti.net')
                 ->verify($data["g-recaptcha-response"], $_SERVER['REMOTE_ADDR']);
 
             if (!$resp->isSuccess()) {
