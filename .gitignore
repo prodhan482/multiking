@@ -30,3 +30,4 @@ public/assets/temp_xls_file/*
 public/apk/*
 !public/apk/index.html
 
+.env
