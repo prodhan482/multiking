@@ -74,7 +74,7 @@ services:
     image: bkashbd.eu
     container_name: multiking_app
     ports:
-      - "8052:8052"
+      - "8052:80"
     volumes:
       - .:/var/www
     environment:
